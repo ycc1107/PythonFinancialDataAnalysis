@@ -1,4 +1,7 @@
 # PythonFinancialDataAnalysis
+## Build status:
+![Build status](https://travis-ci.org/ycc1107/Python_Design_Patterns.svg?branch=master)
+
 ###学习计划:
 本次小组主要基于利用 Python 开发期权交易策略,并进行回测分析。
 在学习中加深对 Python 的理解,提高 Python 对金融数据处理的能力。Project 将
