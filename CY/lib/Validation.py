@@ -2,9 +2,13 @@
 # cheng.yan
 
 import os
+import pkgutil
+
 class Validation:
     def _engineChecker(self,val):
-        pass
+        if val not in [ name for _, name, _ in pkgutil.iter_modules(['CY.Engine']) ]:
+            raise Exception('No engine named {}'.format(val))
+
     def _pathChecker(self,val):
         if not isinstance(val,str):
             raise Exception('Path need to be string')
