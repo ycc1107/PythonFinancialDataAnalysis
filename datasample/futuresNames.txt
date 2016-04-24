@@ -1,0 +1,1 @@
+time	code	open	high	low	last	lastClose	lastAve	close	volume	asset	ask1	bid1	askV1	bidV1

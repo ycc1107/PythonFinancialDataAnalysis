@@ -1,0 +1,1 @@
+time	code	open	low	high	last	lastClose	no	volume	asset	ask1	ask2	ask3	ask4	ask5	bid1	bid2	bid3	bid4	bid5	askV1	askV2	askV3	askV4	askV5	bidV1	bidV2	bidV3	bidV4	bidV5	no2
