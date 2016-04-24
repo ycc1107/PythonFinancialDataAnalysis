@@ -19,7 +19,7 @@ class EngineBase(object):
         volatility
         strike price
         '''
-        if self.__class__.__name__ in  ('BlackScholes','MonteCarlo'):
+        if self.__class__.__name__ in  ('BlackScholes','MonteCarlo','BinomialTree'):
             names = ['Time',
                      'Spot Price',
                      'Strike Price',

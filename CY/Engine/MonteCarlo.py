@@ -1,11 +1,11 @@
 # Monte Carlo
 # cheng.yan
 
-from BlackScholes import BlackScholes
+from Engine import EngineBase
 import numpy as np
 from random import gauss
 
-class MonteCarlo( BlackScholes ):
+class MonteCarlo( EngineBase ):
     def __init__(self,**kwargs):
         super( MonteCarlo, self).__init__(**kwargs)
 

@@ -1,6 +1,6 @@
 import unittest
-from CY.lib.BlackScholes import BlackScholes as BS
-from CY.lib.MonteCarlo import MonteCarlo as MC
+from CY.Engine.BlackScholes import BlackScholes as BS
+from CY.Engine.MonteCarlo import MonteCarlo as MC
 
 
 class EngineUnitTest(unittest.TestCase):

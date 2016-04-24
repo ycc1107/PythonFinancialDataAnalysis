@@ -22,17 +22,17 @@ class MarketDataBase():
 
 
 class ChinaMarketData(MarketDataBase):
-     def getAllData(self):
-        raise NotImplementedError()
+    def getAllData(self):
+         pass
 
     def getAllDataRange(self):
-        raise NotImplementedError()
+        pass
 
     def getVolData(self):
-        raise NotImplementedError()
+        pass
 
     def getVolRange(self):
-        raise NotImplementedError()
+        pass
 
     def getOrderBook(self):
-        raise NotImplementedError()
+        pass
