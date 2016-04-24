@@ -19,7 +19,6 @@ class EngineBase(object):
         volatility
         strike price
         '''
-        print self.__class__.__name__
         if self.__class__.__name__ in  ('BlackScholes','MonteCarlo'):
             names = ['Time',
                      'Spot Price',

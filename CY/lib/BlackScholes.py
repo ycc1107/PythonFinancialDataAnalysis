@@ -28,7 +28,7 @@ class BlackScholes(EngineBase):
         pnd1 = ss.norm.cdf( -1 * self._CACHE['d1'] )
         pnd2 = ss.norm.cdf( -1 * self._CACHE['d2'] )
         self._CACHE['Call'] = self.vars['Spot Price'] * cnd1 - self.vars['Strike Price'] * np.exp( -1 * self.vars['Volatility'] * self.vars['Time']) *  cnd2
-        self._CACHE['Put']  = self.vars['Strike Price'] * np.exp( -1 * self.vars['Volatility'] * self.vars['Time']) *  pnd2 - self.vars['Spot Price'] * cnd1
+        self._CACHE['Put']  = self.vars['Strike Price'] * np.exp( -1 * self.vars['Volatility'] * self.vars['Time']) *  pnd2 - self.vars['Spot Price'] * pnd1
 
 
 
