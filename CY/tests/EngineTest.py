@@ -1,7 +1,9 @@
 import unittest
+
+from CY.Engine.BinomialTree import BinomialTree as BT
 from CY.Engine.BlackScholes import BlackScholes as BS
 from CY.Engine.MonteCarlo import MonteCarlo as MC
-from CY.Engine.BinomialTree import BinomialTree as BT
+
 
 
 class EngineUnitTest(unittest.TestCase):
