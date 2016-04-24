@@ -44,7 +44,7 @@ class EngineBase(object):
             if any([ True for para in self.targetPara if para not in ['Volatility', 'Risk Free','Price']]):
                 raise Exception('Missing critical parameter {}'.format(self.targetPara))
 
-    def _updateParameters(self,**kwargs):
+    def updateParameters(self, **kwargs):
             raise NotImplementedError('Not Implemented')
 
     def getPrice(self, name):

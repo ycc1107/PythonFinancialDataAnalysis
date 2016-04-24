@@ -9,7 +9,7 @@ class MonteCarlo( EngineBase ):
     def __init__(self,**kwargs):
         super( MonteCarlo, self).__init__(**kwargs)
 
-    def _updateParameters(self,**kwargs):
+    def updateParameters(self, **kwargs):
         super( MonteCarlo, self)._inputChecking( **kwargs )
         self.vars.update(kwargs)
         self.pricing()

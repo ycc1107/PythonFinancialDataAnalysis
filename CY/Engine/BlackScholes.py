@@ -16,7 +16,7 @@ class BlackScholes(EngineBase):
     def _d2(self):
         self._CACHE['d2'] = ( np.log(self.vars['Spot Price']/self.vars['Strike Price']) + (self.vars['Risk Free'] - self.vars['Volatility']**2/2) * self.vars['Time'] ) /(self.vars['Volatility']*np.sqrt(self.vars['Time']))
 
-    def _updateParameters(self,**kwargs):
+    def updateParameters(self, **kwargs):
         self._inputChecking(**kwargs)
         self.vars.update(kwargs)
         self._d1()

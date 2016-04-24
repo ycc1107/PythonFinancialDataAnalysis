@@ -11,7 +11,7 @@ class BinomialTree(EngineBase):
         self.dt = self.vars['Time'] / self.TIME_STEP
         self.discountFactor =  math.exp(self.vars['Risk Free'] * self.dt * -1)
 
-    def _updateParameters(self,**kwargs):
+    def updateParameters(self, **kwargs):
         super( BinomialTree, self)._inputChecking( **kwargs )
         self.vars.update(kwargs)
         self._CACHE['updateMarker'] = True
