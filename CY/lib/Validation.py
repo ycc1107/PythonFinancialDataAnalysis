@@ -6,7 +6,8 @@ import pkgutil
 
 class Validation:
     def _engineChecker(self,val):
-        if val not in [ name for _, name, _ in pkgutil.iter_modules(['CY.Engine']) ]:
+        allEngineName = [ name for _, name, _ in pkgutil.iter_modules(['CY.Engine']) ]
+        if any( [ True for v in val if v not in allEngineName ] ):
             raise Exception('No engine named {}'.format(val))
 
     def _pathChecker(self,val):

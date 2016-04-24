@@ -8,6 +8,7 @@ class ValidationUnitTest(unittest.TestCase):
         self.intPath = 1234
         self.nonExsitPath = r'c:\\1234'
         self.nonSupportEngineName = 'TestEngine'
+        self.SupportEngineName = 'BlackScholes'
 
     def test_path_nonString(self):
         expectedVal = 'Path need to be string'
@@ -29,6 +30,13 @@ class ValidationUnitTest(unittest.TestCase):
             self.vd.checker('Engine',self.nonSupportEngineName)
         except Exception,e:
             self.assertEqual(e[0],expectedVal)
+
+    def test_engine_Support(self):
+        expectedVal = 'No engine named TestEngine'
+        try:
+            self.vd.checker('Engine',self.nonSupportEngineName)
+        except Exception,e:
+            self.a
 
 
 
