@@ -37,7 +37,7 @@ class StrategyBase:
         for data in self.marketData:
             [ engine.updateParameters(data) for engine in self.engines ]
 
-    def singleGenerator(self):
+    def singleGenerator(self, **kwargs):
          # the most important func
         # should return list of tuple
         # first element: single
