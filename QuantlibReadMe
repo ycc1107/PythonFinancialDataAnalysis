@@ -1,0 +1,7 @@
+1. Download boost c++
+2. Download quantlib
+3. load quantlib to IDE( I am using VS 2014) by double click QuanLib_vc14.sln
+4. Setup boost c++ path in Property->VC++ Directories
+  a. Include Directories -> boost c++ folder
+  b. Library Diectories -> boost c++ lib folder
+5. Build solution (it may take hours)
