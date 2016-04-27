@@ -1,5 +1,6 @@
 # all validation function
 # cheng.yan
+# Des: all validation related function/class
 
 import os
 import pkgutil
@@ -29,3 +30,17 @@ class Validation:
             raise NotImplemented( 'Validation can not check {}'.format(name) )
 
         getattr( self, CHECKABLE_NAMES[ name ])( val )
+
+
+
+def ParametersChecker(*types):
+    ''' This decorator for function parameters type check'''
+    def wrapper(func):
+        assert len(types) == func.func_code.co_argcount
+        def newFunc(*args,**kwargs):
+            for arg, t in zip(args,types):
+                assert isinstance(arg,t), 'Type %s is not match %s'%(args, t)
+            return func(*arg, **kwargs)
+        newFunc.func_name = func.func_name
+        return newFunc
+    return wrapper
