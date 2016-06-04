@@ -4,6 +4,10 @@
 import wx
 import wx.grid as gridlib
 
+class HelpMenuMix:
+    def __init__(self):
+        pass
+
 class RandomPanel(wx.Panel):
     def __init__(self, parent, color):
         """Constructor"""
@@ -15,15 +19,19 @@ class MainPanel(wx.Panel):
     def __init__(self, parent):
         """Constructor"""
         wx.Panel.__init__(self, parent)
-
+        #top
         topSplitter = wx.SplitterWindow(self)
-        hSplitter = wx.SplitterWindow(topSplitter)
+        hTopSplitter = wx.SplitterWindow(topSplitter)
+        panelTopLeft = RandomPanel(hTopSplitter, "blue")
+        panelTopRight = RandomPanel(hTopSplitter, "red")
+        #bottom
+        topSplitter = wx.SplitterWindow(self)
+        hBottomSplitter = wx.SplitterWindow(topSplitter)
+        panelLeft = RandomPanel(hBottomSplitter, "blue")
+        panelRight = RandomPanel(hBottomSplitter, "red")
+        self.createDataGrid( panelTopLeft)
 
-        panelOne = RandomPanel(hSplitter, "blue")
-        panelTwo = RandomPanel(hSplitter, "red")
-        self.createDataGrid(panelOne)
-
-        hSplitter.SplitVertically(panelOne, panelTwo)
+        hTopSplitter.SplitVertically( panelTopLeft, panelTopRight)
         hSplitter.SetSashGravity(0.2)
 
         panelThree = RandomPanel(topSplitter, "green")
